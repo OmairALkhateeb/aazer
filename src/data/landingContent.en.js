@@ -20,7 +20,7 @@ export const hero = {
     'With Aazer you book an online appointment with a doctor and talk to them directly by voice or video call, order your medicine from your preferred pharmacy, and keep track of your daily medication schedule so you never miss a dose.',
   primaryCta: 'Get Aazer',
   secondaryCta: 'Explore features',
-  image: '/images/app/home.png',
+  image: '/images/app/home.jpg',
 }
 
 export const intro = {
@@ -42,7 +42,7 @@ export const productFeatures = [
     description:
       'Choose the right doctor and book an appointment at a time that suits you, then talk to them directly over a voice or video call, with no need to travel or wait at a clinic.',
     bullets: ['Book your appointment online in simple steps', 'A direct voice call with your doctor', 'A video call when you need one'],
-    image: '/images/app/feature-1.png',
+    image: '/images/app/feature-1.jpg',
     imageAlt: 'Doctor appointment booking screen in the Aazer app',
   },
   {
@@ -62,7 +62,7 @@ export const productFeatures = [
     description:
       'Log your daily medication schedule inside Aazer, and it will remind you when each dose is due, helping you stick to the treatment plan your doctor prescribed.',
     bullets: ['A daily schedule for your medicine', 'A reminder for every dose', 'Track how well you keep up with your plan'],
-    image: '/images/app/feature-3.png',
+    image: '/images/app/feature-3.jpg',
     imageAlt: 'Daily medication schedule screen in the Aazer app',
   },
 ]
