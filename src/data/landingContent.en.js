@@ -52,7 +52,7 @@ export const productFeatures = [
     description:
       'Choose the pharmacy you trust and order your medicine from it directly through the app, with no need to call or go in person to check what is available.',
     bullets: ['Choose the pharmacy that suits you', 'Send your medicine order directly from the app', 'Track the status of your order'],
-    image: '/images/app/feature-2.png',
+    image: '/images/app/feature-2.jpg',
     imageAlt: 'Pharmacy medicine order screen in the Aazer app',
   },
   {
@@ -162,7 +162,7 @@ export const download = {
   },
   qrImage: '/images/azer-qr.png',
   qrCaption: 'Scan the code to download Aazer',
-  phoneImage: '/images/app/download-screen.png',
+  phoneImage: '/images/app/download-screen.jpg',
 }
 
 export const footer = {

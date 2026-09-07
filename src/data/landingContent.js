@@ -50,7 +50,7 @@ export const productFeatures = [
     description:
       'اختر الصيدلية التي تثق بها واطلب دواءك منها مباشرة عبر التطبيق، دون الحاجة للاتصال أو الذهاب شخصيًا للسؤال عن توفره.',
     bullets: ['اختيار الصيدلية التي تناسبك', 'إرسال طلب الدواء مباشرة من التطبيق', 'متابعة حالة طلبك'],
-    image: '/images/app/feature-2.png',
+    image: '/images/app/feature-2.jpg',
     imageAlt: 'شاشة طلب الدواء من الصيدلية في تطبيق آزر',
   },
   {
@@ -160,7 +160,7 @@ export const download = {
   },
   qrImage: '/images/azer-qr.png',
   qrCaption: 'امسح الرمز لتحميل آزر',
-  phoneImage: '/images/app/download-screen.png',
+  phoneImage: '/images/app/download-screen.jpg',
 }
 
 export const footer = {
