@@ -13,21 +13,25 @@ function getInitialLanguage() {
 
 const LanguageContext = createContext(null)
 
-export function LanguageProvider({ children }) {
+const getDefaultMeta = (content) => content.meta
+
+// getMeta lets a page other than the landing page supply its own title/description.
+export function LanguageProvider({ children, getMeta = getDefaultMeta }) {
   const [language, setLanguage] = useState(getInitialLanguage)
 
   useEffect(() => {
     document.documentElement.lang = language
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr'
-    document.title = translations[language].meta.title
+    const meta = getMeta(translations[language])
+    document.title = meta.title
 
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
-      metaDescription.setAttribute('content', translations[language].meta.description)
+      metaDescription.setAttribute('content', meta.description)
     }
 
     window.localStorage.setItem(STORAGE_KEY, language)
-  }, [language])
+  }, [language, getMeta])
 
   const value = useMemo(() => {
     const content = translations[language]

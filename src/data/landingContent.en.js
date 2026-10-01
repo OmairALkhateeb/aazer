@@ -4,11 +4,11 @@
 
 export const nav = {
   links: [
-    { label: 'Home', href: '#' },
-    { label: 'About Aazer', href: '#about' },
-    { label: 'Features', href: '#features' },
-    { label: 'How it works', href: '#how-it-works' },
-    { label: 'FAQ', href: '#faq' },
+    { label: 'Home', href: '/#' },
+    { label: 'About Aazer', href: '/#about' },
+    { label: 'Features', href: '/#features' },
+    { label: 'How it works', href: '/#how-it-works' },
+    { label: 'FAQ', href: '/#faq' },
   ],
   cta: 'Get Aazer',
 }
@@ -173,25 +173,25 @@ export const footer = {
     {
       title: 'Aazer',
       links: [
-        { label: 'About Aazer', href: '#about' },
-        { label: 'Features', href: '#features' },
-        { label: 'How it works', href: '#how-it-works' },
+        { label: 'About Aazer', href: '/#about' },
+        { label: 'Features', href: '/#features' },
+        { label: 'How it works', href: '/#how-it-works' },
       ],
     },
     {
       title: 'Support',
       links: [
-        { label: 'FAQ', href: '#faq' },
-        // Placeholder route — no contact page exists yet.
+        { label: 'FAQ', href: '/#faq' },
+        // Scrolls to the phone numbers block in the footer.
         { label: 'Contact us', href: '#contact' },
       ],
     },
     {
       title: 'Legal',
       links: [
-        // Placeholder routes — no legal pages exist yet, do not fabricate content for them.
-        { label: 'Privacy Policy', href: '#privacy' },
-        { label: 'Terms & Conditions', href: '#terms' },
+        // Privacy policy and terms of use are a single combined document.
+        { label: 'Privacy Policy', href: '/privacy/' },
+        { label: 'Terms & Conditions', href: '/privacy/#acceptable-use' },
       ],
     },
     {
@@ -203,6 +203,18 @@ export const footer = {
       ],
     },
   ],
+  // Reserved numbers 0989582986–0989582989 are spares and intentionally not listed.
+  contact: {
+    title: 'Contact numbers',
+    phones: [
+      { label: 'Main line & customer service 1', number: '0989582982' },
+      { label: 'Main line & customer service 2', number: '0989582983' },
+      { label: 'General management', number: '0989582980' },
+      { label: 'Sales & marketing', number: '0989582981' },
+      { label: 'Finance (accounting)', number: '0989582984' },
+      { label: 'Technical support & development', number: '0989582985' },
+    ],
+  },
   // No confirmed social accounts yet — hrefs stay '#' rather than fabricated URLs.
   social: [
     { label: 'Instagram', href: '#' },
@@ -276,4 +288,108 @@ export const ui = {
   googlePlayLabel: 'Get it on Google Play',
   unknownInitial: '?',
   copyright: (year) => `© ${year} Aazer. All rights reserved.`,
+}
+
+// Privacy policy & terms of use — rendered on /privacy/ (src/pages/PrivacyPage.jsx).
+// Translation of the Arabic text in landingContent.js, which is the company-supplied original.
+export const privacyPolicy = {
+  meta: {
+    title: 'Privacy Policy & Terms of Use | Aazer',
+    description: 'Privacy policy and terms of use for Aazer, the medical appointment booking app.',
+  },
+  eyebrow: 'Legal',
+  title: 'Privacy Policy & Terms of Use',
+  subtitle: 'This page explains how we collect, use and protect your data, and the terms that govern your use of the Aazer app.',
+  lastUpdatedLabel: 'Last updated',
+  lastUpdated: 'October 1, 2026',
+  tocTitle: 'Contents',
+  sections: [
+    {
+      id: 'about',
+      title: 'About the app and the responsible party',
+      body: 'Aazer is a digital platform that provides medical appointment booking services to its users.',
+      items: [
+        { label: 'Owner and responsible party', text: 'Hyper Loop / General Manager: Mohammad Karim Al-Sharbaji' },
+        { label: 'Headquarters', text: 'Cham Hotel Complex Building, Al-Salihiyah, Damascus, Syria' },
+        { text: 'The responsible party is committed to protecting user data and providing a safe environment of use in accordance with the provisions set out in this policy.' },
+      ],
+    },
+    {
+      id: 'accounts',
+      title: 'Target audience and user accounts',
+      items: [
+        { text: 'The app is intended for the general public.' },
+        { text: "Access to some or all of the app's services requires creating a personal account and providing accurate information." },
+        { text: 'Users are fully responsible for keeping their account details confidential and for any activity carried out through their account.' },
+      ],
+    },
+    {
+      id: 'services',
+      title: 'How the services are used',
+      items: [
+        { text: 'Services are provided through the app according to the features and options available in its interface.' },
+        { text: 'Some services may be available free of charge, while others may require paying fees or activating specific subscriptions.' },
+        { text: 'Users agree to follow the technical and regulatory instructions and controls while using the services.' },
+      ],
+    },
+    {
+      id: 'data',
+      title: 'Collection of data and personal information',
+      items: [
+        {
+          label: 'Data collected',
+          text: 'The app may collect certain data necessary to provide the service, such as: name, email address, phone number, geographic location, and medical data.',
+        },
+        {
+          label: 'Purposes of use',
+          text: 'Data is used to operate the app, provide technical support, improve service quality, and meet regulatory obligations.',
+        },
+        {
+          label: 'Data confidentiality',
+          text: "We do not share or sell any personal data to third parties except with the user's explicit consent or in response to applicable legal requirements.",
+        },
+      ],
+    },
+    {
+      id: 'acceptable-use',
+      title: 'Acceptable use and prohibitions',
+      body: 'While using the Aazer app, users must not:',
+      items: [
+        { text: 'Misuse the app or disrupt its operation by any technical means.' },
+        { text: 'Use the service for unlawful purposes or in violation of local or international regulations.' },
+        { text: "Attempt unauthorized access to other users' data or to the app's systems." },
+      ],
+    },
+    {
+      id: 'intellectual-property',
+      title: 'Intellectual property and administrative rights',
+      items: [
+        { text: 'All intellectual property rights in the app (including designs, trademarks, source code and content) are the exclusive property of Hyper Loop.' },
+        { text: 'Hyper Loop reserves the right to modify, suspend or terminate the account of any user who violates the terms of use, without prior notice.' },
+      ],
+    },
+    {
+      id: 'security',
+      title: 'Information security and disclaimer',
+      items: [
+        { text: 'We apply standard measures to protect data against unauthorized access, alteration or destruction.' },
+        { text: "The app's services are provided based on available capabilities, and Hyper Loop is not liable for any indirect damages or interruptions resulting from circumstances beyond the app's technical control." },
+      ],
+    },
+    {
+      id: 'changes',
+      title: 'Changes to the policy and terms',
+      body: 'Hyper Loop reserves the right to amend this policy at any time. Users will be notified of any updates by email or by an in-app notification, and continued use of the app constitutes acceptance of the updated policy.',
+    },
+    {
+      id: 'support',
+      title: 'Contact and technical support',
+      body: 'For any questions or feedback regarding the terms and policy of use, you can reach us via:',
+      contacts: [
+        { label: 'Email', value: 'hello@aazer.app', href: 'mailto:hello@aazer.app', ltr: true },
+        { label: 'Phone', value: '0989582982', href: 'tel:+963989582982', ltr: true },
+        { label: 'Address', value: 'Cham Hotel Complex Building, Al-Salihiyah, Damascus, Syria' },
+      ],
+    },
+  ],
 }

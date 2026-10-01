@@ -39,10 +39,10 @@ function Navbar() {
       <Container className="flex h-18 items-center justify-between py-3">
         <div className="flex items-center gap-10">
           <a
-            href="#"
-            className="rounded-md text-xl font-extrabold text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            href="/#"
+            className="shrink-0 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            {ui.logo}
+            <img src="/images/brand/azer-logo.png" alt={ui.logo} width="737" height="523" className="h-12 w-auto" />
           </a>
 
           <nav className="hidden items-center gap-8 lg:flex" aria-label={ui.mainMenuLabel}>
@@ -68,7 +68,7 @@ function Navbar() {
             {ui.switchLanguageTo}
           </button>
           <a
-            href="#download"
+            href="/#download"
             className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             {nav.cta}
@@ -131,7 +131,7 @@ function Navbar() {
                 {ui.switchLanguageTo}
               </button>
               <a
-                href="#download"
+                href="/#download"
                 onClick={() => setMenuOpen(false)}
                 className="flex-1 rounded-full bg-primary px-5 py-2.5 text-center text-sm font-semibold text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               >

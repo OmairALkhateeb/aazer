@@ -11,7 +11,7 @@ function AppScreenshot({ src, alt = '', className = '', priority = false }) {
         className={`flex h-full w-full flex-col items-center justify-center gap-3 bg-gradient-to-b from-brand-100 to-brand-50 ${className}`}
       >
         <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
-          <span className="h-6 w-6 rounded-full bg-primary" />
+          <img src="/images/brand/azer-icon.png" alt="" className="h-9 w-9" />
         </span>
         <span className="text-sm font-medium text-brand-700">{ui.logo}</span>
       </div>

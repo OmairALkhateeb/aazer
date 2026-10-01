@@ -47,6 +47,34 @@ function FooterLinkGroup({ title, links }) {
   )
 }
 
+// Local Syrian numbers (09xxxxxxxx) → international tel: format.
+function toTelHref(number) {
+  return `tel:+963${number.replace(/^0/, '')}`
+}
+
+function FooterContact({ title, phones }) {
+  return (
+    <div id="contact" className="flex scroll-mt-24 flex-col items-center gap-6 sm:items-start">
+      <h3 className="text-sm font-semibold text-white">{title}</h3>
+      <ul className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {phones.map((phone) => (
+          <li key={phone.number}>
+            <a
+              href={toTelHref(phone.number)}
+              className="flex flex-col items-center gap-1 rounded-xl border border-white/10 px-4 py-3 text-center transition-colors hover:border-white/25 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 sm:items-start sm:text-start"
+            >
+              <span className="text-sm text-brand-300">{phone.label}</span>
+              <span dir="ltr" className="text-base font-semibold tracking-wide text-white">
+                {phone.number}
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
 function Footer() {
   const { footer, ui } = useContent()
   const { language, setLanguage } = useLanguage()
@@ -55,7 +83,14 @@ function Footer() {
     <footer className="bg-brand-900 text-brand-100">
       <Container className="flex flex-col gap-12 py-16 sm:py-20 lg:gap-16 lg:py-24">
         <div className="flex flex-col items-center gap-4 text-center sm:items-start sm:text-start">
-          <span className="text-2xl font-bold text-white">{ui.logo}</span>
+          <img
+            src="/images/brand/azer-logo-light.png"
+            alt={ui.logo}
+            width="737"
+            height="523"
+            loading="lazy"
+            className="h-20 w-auto"
+          />
           <p className="max-w-xs text-base font-medium text-brand-100">{footer.brandStatement}</p>
           <p className="max-w-sm text-sm text-brand-300">{footer.description}</p>
         </div>
@@ -64,6 +99,10 @@ function Footer() {
           {footer.groups.map((group) => (
             <FooterLinkGroup key={group.title} title={group.title} links={group.links} />
           ))}
+        </div>
+
+        <div className="border-t border-white/10 pt-12 lg:pt-16">
+          <FooterContact title={footer.contact.title} phones={footer.contact.phones} />
         </div>
 
         <div className="flex flex-col items-center gap-6 border-t border-white/10 pt-8 sm:flex-row sm:justify-between">
